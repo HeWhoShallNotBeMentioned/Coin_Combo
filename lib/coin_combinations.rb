@@ -5,6 +5,7 @@ class Float
     nickels = 0
     pennies = 0
     total_change = self
+    output_string = ""
 
     until total_change.<(0.25)
       total_change = total_change.-(0.25).round(2)
@@ -26,10 +27,9 @@ class Float
       pennies = pennies.+(1)
     end
 
-    puts "You have #{quarters} quarters"
-    puts "You have #{dimes} dimes"
-    puts "You have #{nickels} nickels"
-    puts "You have #{pennies} pennies"
+    return output_string =  "You have #{quarters} quarters, #{dimes} dimes, #{nickels} nickels, and #{pennies} pennies"
+
+
 
   end
 end
